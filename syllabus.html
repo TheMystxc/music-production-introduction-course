@@ -4,16 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Course Syllabus | Music Production</title>
+  
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    /* Base Page Styling */
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      background-color: #f4f6f8; 
-      color: #333;
-      line-height: 1.6;
-    }
+    /* Syllabus-Specific Layout Styles */
     .container {
       max-width: 900px; 
       margin: 0 auto;
@@ -32,7 +27,6 @@
     .back-btn:hover { text-decoration: underline; }
     
     /* Header & Intro Section */
-    h1 { margin-top: 0; color: #1a1a1a; font-size: 2.2rem; margin-bottom: 10px; }
     .course-meta {
       background: #f9f9f9;
       padding: 15px;
@@ -73,6 +67,7 @@
       font-weight: normal;
       font-size: 1.05rem;
       margin-left: 10px;
+      text-transform: none; /* Prevents the date from becoming uppercase like the headings */
     }
 
     /* Category Badges */
@@ -91,10 +86,44 @@
     .badge.project { background-color: #28a745; }
     .badge.deadline { background-color: #dc3545; }
     .badge.theory { background-color: #fd7e14; }
-
   </style>
 </head>
 <body>
+
+<nav class="sidebar">
+    <a href="index.html">
+      <span class="sidebar-icon">🏠</span>
+      <span class="sidebar-text">Home</span>
+    </a>
+    
+    <div class="sidebar-dropdown">
+      <a href="syllabus.html">
+        <span class="sidebar-icon">📋</span>
+        <span class="sidebar-text">Syllabus ▾</span>
+      </a>
+      <div class="sidebar-dropdown-menu">
+        <a href="syllabus.html?session=tue">
+          <span class="sidebar-text">Tue 5:00 PM</span>
+        </a>
+        <a href="syllabus.html?session=wed">
+          <span class="sidebar-text">Wed 6:30 PM</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="lessons.html">
+      <span class="sidebar-icon">🎧</span>
+      <span class="sidebar-text">Lessons</span>
+    </a>
+    <a href="tools.html">
+      <span class="sidebar-icon">🎛️</span>
+      <span class="sidebar-text">Tools</span>
+    </a>
+    <a href="resources.html">
+      <span class="sidebar-icon">📁</span>
+      <span class="sidebar-text">Resources</span>
+    </a>
+  </nav>
 
   <div class="container">
     <a href="index.html" class="back-btn">← Back to Home</a>
@@ -261,7 +290,6 @@
     }
 
     // 2. Google Sheets CSV Fetch Logic
-    // Paste the CSV link you copied from Google Sheets right between the quotes below:
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSbcB07uz0WhFY8ap0PICUkw94arNX7JBHVkD_qezcD4OXnZmUXfv-kIzA2_Zc0OgMPzbXazGbTjZrm/pub?gid=0&single=true&output=csv'; 
 
     if (csvUrl !== 'PASTE_YOUR_CSV_LINK_HERE') {
@@ -278,9 +306,6 @@
               let dateStr = '';
               let noteStr = '';
               
-              // Map to the new A-E columns
-              // cols[0] = Week, cols[1] = Tue Date, cols[2] = Tue Note
-              // cols[3] = Wed Date, cols[4] = Wed Note
               if (session === 'tue') {
                   dateStr = cols[1] ? cols[1].trim() : '';
                   noteStr = cols[2] ? cols[2].trim() : '';
@@ -293,14 +318,12 @@
                   noteStr = cols[2] ? cols[2].trim() : '';
               }
               
-              // Finds the span tag for that specific week
               const dateElement = document.getElementById('date-' + weekNum);
               if (dateElement && dateStr) {
                   let displayText = ' • ' + dateStr;
                   if (noteStr) displayText += ' [' + noteStr + ']';
                   dateElement.textContent = displayText;
                   
-                  // Turns text red if you type 'cancel' in the note column
                   if (noteStr.toLowerCase().includes('cancel')) {
                       dateElement.style.color = '#dc3545';
                       dateElement.style.fontWeight = 'bold';

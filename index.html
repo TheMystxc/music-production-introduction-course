@@ -1,167 +1,97 @@
-<style>
-  /* Base Styles */
-  body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: transparent;
-  }
-
-  .home-container {
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-
-  .header-section, .intro-text {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header-section {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #eaeaea;
-  }
-
-  h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 10px; }
-  h2 { font-size: 1.25rem; font-weight: 400; color: #555; margin-top: 0; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Production Course Pack | Home</title>
   
-  .intro-text { font-size: 1.1rem; margin-bottom: 40px; }
-  .intro-text h3 { margin-top: 30px; color: #1a1a1a; }
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 25px;
-  }
-
-  @media (max-width: 1000px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 650px) { .grid-container { grid-template-columns: 1fr; } }
-
-  .card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-  .card h3 { margin-top: 0; font-size: 1.4rem; color: #2c3e50; display: flex; align-items: center; gap: 10px; }
-  .card p { flex-grow: 1; font-size: 0.95rem; color: #666; }
-
-  /* Default Button Styles */
-  .card-btn {
-    display: inline-block;
-    text-align: center;
-    background-color: #0056b3;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.2s;
-    cursor: pointer;
-  }
-  .card-btn:hover { background-color: #004494; color: #fff; }
-
-  /* Interactive Split Button Container */
-  .syllabus-btn-container {
-    position: relative;
-    height: 45px; /* Keeps the card height stable during transition */
-    margin-top: 15px;
-  }
-  
-  .main-btn {
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    margin-top: 0;
-    transition: opacity 0.2s, visibility 0.2s;
-  }
-  
-  .split-btns {
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
-  }
-  
-  /* Trigger the swap on hover */
-  .syllabus-btn-container:hover .main-btn {
-    opacity: 0;
-    visibility: hidden;
-  }
-  .syllabus-btn-container:hover .split-btns {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .split-btns .card-btn {
-    flex: 1; /* Makes both buttons share the space equally */
-    margin-top: 0;
-    padding: 10px 5px;
-    font-size: 0.85rem;
-  }
-</style>
-
-<div class="home-container">
-  <div class="header-section">
-    <h1>Home</h1>
-    <h2>Welcome to the Course Pack for the Gilmore's Introductory Music Production Course.</h2>
-  </div>
-
-  <div class="intro-text">
-    <p>Welcome! This website serves as your digital coursepack and central hub for everything we will cover in class. Instead of a massive stack of paper, you will find all your reading materials, audio examples, software guides, and project files organized here.</p>
+  <nav class="sidebar">
+    <a href="index.html">
+      <span class="sidebar-icon">🏠</span>
+      <span class="sidebar-text">Home</span>
+    </a>
     
-    <h3>How to Navigate This Site</h3>
-    <p>Use the site's top navigation bar or the quick links below to find what you need. The site is broken down into four main areas to keep things simple. If you are ever lost, just click "Home" at the top to return to this screen.</p>
-  </div>
+    <div class="sidebar-dropdown">
+      <a href="syllabus.html">
+        <span class="sidebar-icon">📋</span>
+        <span class="sidebar-text">Syllabus ▾</span>
+      </a>
+      <div class="sidebar-dropdown-menu">
+        <a href="syllabus.html?session=tue">
+          <span class="sidebar-text">Tue 5:00 PM</span>
+        </a>
+        <a href="syllabus.html?session=wed">
+          <span class="sidebar-text">Wed 6:30 PM</span>
+        </a>
+      </div>
+    </div>
 
-  <div class="grid-container">
-    
-    <div class="card">
-      <h3>📋 Syllabus</h3>
-      <p>Start here! This outlines our class schedule, core objectives, grading policies, and contact information.</p>
+    <a href="lessons.html">
+      <span class="sidebar-icon">🎧</span>
+      <span class="sidebar-text">Lessons</span>
+    </a>
+    <a href="tools.html">
+      <span class="sidebar-icon">🎛️</span>
+      <span class="sidebar-text">Tools</span>
+    </a>
+    <a href="resources.html">
+      <span class="sidebar-icon">📁</span>
+      <span class="sidebar-text">Resources</span>
+    </a>
+  </nav>
+
+  <div class="home-container">
+    <div class="header-section">
+      <h1>HOME</h1>
+      <h2>Welcome to the Digital Coursepack for the Gilmore's Introductory Music Production Course.</h2>
+    </div>
+
+    <div class="intro-text">
+      <p>Welcome! This website serves as your digital coursepack and central hub for everything we will cover in class. Instead of a massive stack of paper, you will find all your reading materials, audio examples, software guides, and project files organized here.</p>
       
-      <div class="syllabus-btn-container">
-        <div class="card-btn main-btn">View Syllabus</div>
-        <div class="split-btns">
-          <a href="syllabus.html?session=tue" class="card-btn">Tue 5:00 PM</a>
-          <a href="syllabus.html?session=wed" class="card-btn">Wed 6:30 PM</a>
+      <h3>HOW TO NAVIGATE THIS SITE</h3>
+      <p>Use the site's top navigation bar or the quick links below to find what you need. The site is broken down into four main areas to keep things simple. If you are ever lost, just click "Home" at the top to return to this screen.</p>
+    </div>
+
+    <div class="grid-container">
+      
+      <div class="card">
+        <h3>📋 SYLLABUS</h3>
+        <p>Start here! This outlines our class schedule, core objectives, grading policies, and contact information.</p>
+        
+        <div class="syllabus-btn-container">
+          <div class="card-btn main-btn">View Syllabus</div>
+          <div class="split-btns">
+            <a href="syllabus.html?session=tue" class="card-btn">Tue 5:00 PM</a>
+            <a href="syllabus.html?session=wed" class="card-btn">Wed 6:30 PM</a>
+          </div>
         </div>
       </div>
-      
-    </div>
 
-    <div class="card">
-      <h3>🎧 Lessons</h3>
-      <p>The core of the coursepack. Find a breakdown of weekly modules, reading materials, embedded video tutorials, and step-by-step project instructions.</p>
-      <a href="lessons.html" class="card-btn">Go to Lessons</a>
-    </div>
+      <div class="card">
+        <h3>🎧 LESSONS</h3>
+        <p>The core of the coursepack. Find a breakdown of weekly modules, reading materials, embedded video tutorials, and step-by-step project instructions.</p>
+        <a href="lessons.html" class="card-btn">Go to Lessons</a>
+      </div>
 
-    <div class="card">
-      <h3>🎛️ Interactive Tools</h3>
-      <p>Get hands-on with the software. Explore interactive diagrams, custom calculators, and web-based audio tools to visualize and practice core concepts.</p>
-      <a href="tools.html" class="card-btn">Launch Tools</a>
-    </div>
+      <div class="card">
+        <h3>🎛️ INTERACTIVE TOOLS</h3>
+        <p>Get hands-on with the software. Explore interactive diagrams, custom calculators, and web-based audio tools to visualize and practice core concepts.</p>
+        <a href="tools.html" class="card-btn">Launch Tools</a>
+      </div>
 
-    <div class="card">
-      <h3>📁 Resources</h3>
-      <p>Your ultimate asset library. Download essential files for projects, including sample packs, audio stems, templates, and links to recommended plugins.</p>
-      <a href="resources.html" class="card-btn">Browse Resources</a>
-    </div>
+      <div class="card">
+        <h3>📁 RESOURCES</h3>
+        <p>Your ultimate asset library. Download essential files for projects, including sample packs, audio stems, templates, and links to recommended plugins.</p>
+        <a href="resources.html" class="card-btn">Browse Resources</a>
+      </div>
 
+    </div>
   </div>
-</div>
+
+</body>
+</html>

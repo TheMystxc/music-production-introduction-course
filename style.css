@@ -1,0 +1,279 @@
+/* Import Montserrat (The free "Gotham" alternative) from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* =========================================
+   Base Styles & Typography
+   ========================================= */
+body {
+  font-family: 'Gotham', 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  margin-left: 60px; /* Shifts content to make room for the sidebar */
+  padding: 20px;
+  background-color: #f4f6f8;
+}
+
+/* Headlines use the Bold weight (700) for that classic Gotham punch */
+h1 { 
+  font-size: 2.5rem; 
+  color: #1a1a1a; 
+  margin-bottom: 10px; 
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+h2 { 
+  font-size: 1.25rem; 
+  font-weight: 400; 
+  color: #555; 
+  margin-top: 0; 
+  text-transform: uppercase;
+}
+
+/* =========================================
+   Layout Containers
+   ========================================= */
+.home-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header-section, .intro-text {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.intro-text { 
+  font-size: 1.1rem; 
+  margin-bottom: 40px; 
+}
+
+.intro-text h3 { 
+  margin-top: 30px; 
+  color: #1a1a1a; 
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   Grid System
+   ========================================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 25px;
+}
+
+@media (max-width: 1000px) { 
+  .grid-container { grid-template-columns: repeat(2, 1fr); } 
+}
+@media (max-width: 650px) { 
+  .grid-container { grid-template-columns: 1fr; } 
+}
+
+/* =========================================
+   Card Styling
+   ========================================= */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1); 
+}
+
+.card h3 { 
+  margin-top: 0; 
+  font-size: 1.4rem; 
+  color: #2c3e50; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p { 
+  flex-grow: 1; 
+  font-size: 0.95rem; 
+  color: #666; 
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.card-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  text-transform: uppercase; 
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.card-btn:hover { 
+  background-color: #004494; 
+  color: #fff; 
+}
+
+/* =========================================
+   Interactive Split Button (Syllabus)
+   ========================================= */
+.syllabus-btn-container {
+  position: relative;
+  height: 45px;
+  margin-top: 15px;
+}
+
+.main-btn {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  margin-top: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.split-btns {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Trigger the swap on hover */
+.syllabus-btn-container:hover .main-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.syllabus-btn-container:hover .split-btns {
+  opacity: 1;
+  visibility: visible;
+}
+
+.split-btns .card-btn {
+  flex: 1;
+  margin-top: 0;
+  padding: 10px 2px;
+  font-size: 0.75rem;
+}
+
+/* =========================================
+   Sidebar Navigation
+   ========================================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px; /* The collapsed width */
+  background-color: #1a1a1a; /* Dark Gotham aesthetic */
+  transition: width 0.3s ease; /* Smooth expanding animation */
+  overflow: hidden;
+  z-index: 1000; /* Keeps it on top of all other content */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+/* Expand the sidebar when the user hovers over it */
+.sidebar:hover {
+  width: 220px; 
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #a0a0a0;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s, background-color 0.2s;
+  white-space: nowrap; /* Prevents text from wrapping when collapsed */
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.sidebar-icon {
+  min-width: 20px; /* Keeps the icons perfectly aligned */
+  margin-right: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.sidebar-text {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Fades the text in only after the sidebar expands */
+.sidebar:hover .sidebar-text {
+  opacity: 1;
+  transition-delay: 0.1s; 
+}
+
+/* =========================================
+   Sidebar Dropdown (Syllabus)
+   ========================================= */
+.sidebar-dropdown {
+  position: relative;
+}
+
+.sidebar-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #111111; /* Slightly darker to distinguish sub-items */
+}
+
+/* Only allow the dropdown to open if the sidebar itself is fully expanded */
+.sidebar:hover .sidebar-dropdown:hover .sidebar-dropdown-menu {
+  max-height: 120px; 
+}
+
+.sidebar-dropdown-menu a {
+  padding-left: 55px; /* Indents the text to align perfectly past the icon */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.sidebar-dropdown-menu a:hover {
+  background-color: #333333;
+}

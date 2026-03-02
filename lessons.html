@@ -4,16 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Course Lessons | Music Production</title>
+  
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    /* Base Page Styling */
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      background-color: #f4f6f8; 
-      color: #333;
-      line-height: 1.6;
-    }
+    /* Lessons Directory Specific Styles */
     .container {
       max-width: 900px; 
       margin: 0 auto;
@@ -31,13 +26,6 @@
     }
     .back-btn:hover { text-decoration: underline; }
     
-    /* Header & Intro Section */
-    h1 {
-      margin-top: 0;
-      color: #1a1a1a;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
     .intro-blurb {
       font-size: 1.1rem;
       color: #444;
@@ -48,7 +36,7 @@
       border-left: 4px solid #17a2b8;
     }
 
-    /* Unit Headers */
+    /* Unit Headers Specific to Lessons/Syllabus */
     h2 {
       color: #0056b3;
       border-bottom: 2px solid #eee;
@@ -76,12 +64,14 @@
     .lesson-title {
       margin: 0 0 8px 0;
       font-size: 1.3rem;
+      text-transform: none; /* Overrides the master sheet so titles are readable */
     }
     .lesson-title a {
       color: #1a1a1a;
       text-decoration: none;
       display: inline-block;
     }
+    
     /* Adds a subtle arrow animation on hover */
     .lesson-title a::after {
       content: ' →';
@@ -106,6 +96,41 @@
   </style>
 </head>
 <body>
+  
+    <nav class="sidebar">
+    <a href="index.html">
+      <span class="sidebar-icon">🏠</span>
+      <span class="sidebar-text">Home</span>
+    </a>
+    
+    <div class="sidebar-dropdown">
+      <a href="syllabus.html">
+        <span class="sidebar-icon">📋</span>
+        <span class="sidebar-text">Syllabus ▾</span>
+      </a>
+      <div class="sidebar-dropdown-menu">
+        <a href="syllabus.html?session=tue">
+          <span class="sidebar-text">Tue 5:00 PM</span>
+        </a>
+        <a href="syllabus.html?session=wed">
+          <span class="sidebar-text">Wed 6:30 PM</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="lessons.html">
+      <span class="sidebar-icon">🎧</span>
+      <span class="sidebar-text">Lessons</span>
+    </a>
+    <a href="tools.html">
+      <span class="sidebar-icon">🎛️</span>
+      <span class="sidebar-text">Tools</span>
+    </a>
+    <a href="resources.html">
+      <span class="sidebar-icon">📁</span>
+      <span class="sidebar-text">Resources</span>
+    </a>
+  </nav>
 
   <div class="container">
     <a href="index.html" class="back-btn">← Back to Home</a>
