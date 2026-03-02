@@ -9,20 +9,17 @@
     background-color: transparent;
   }
 
-  /* Widened container to give the 4 cards room to breathe */
   .home-container {
     max-width: 1300px;
     margin: 0 auto;
   }
 
-  /* Keeps the text from stretching too wide and becoming hard to read */
   .header-section, .intro-text {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* Header Section */
   .header-section {
     text-align: center;
     margin-bottom: 40px;
@@ -30,50 +27,21 @@
     border-bottom: 2px solid #eaeaea;
   }
 
-  h1 {
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-  }
+  h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 10px; }
+  h2 { font-size: 1.25rem; font-weight: 400; color: #555; margin-top: 0; }
+  
+  .intro-text { font-size: 1.1rem; margin-bottom: 40px; }
+  .intro-text h3 { margin-top: 30px; color: #1a1a1a; }
 
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #555;
-    margin-top: 0;
-  }
-
-  /* Intro Text */
-  .intro-text {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-
-  .intro-text h3 {
-    margin-top: 30px;
-    color: #1a1a1a;
-  }
-
-  /* Grid Layout for the 4 Sections */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Forces 4 columns on desktop */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 25px;
   }
 
-  /* Responsive Rules: Makes cards stack nicely on smaller screens */
-  @media (max-width: 1000px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 650px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
+  @media (max-width: 1000px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 650px) { .grid-container { grid-template-columns: 1fr; } }
 
-  /* Individual Cards */
   .card {
     background: #fff;
     border: 1px solid #e0e0e0;
@@ -85,27 +53,11 @@
     flex-direction: column;
   }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+  .card h3 { margin-top: 0; font-size: 1.4rem; color: #2c3e50; display: flex; align-items: center; gap: 10px; }
+  .card p { flex-grow: 1; font-size: 0.95rem; color: #666; }
 
-  .card h3 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .card p {
-    flex-grow: 1; /* Pushes the button to the bottom */
-    font-size: 0.95rem;
-    color: #666;
-  }
-
-  /* Buttons */
+  /* Default Button Styles */
   .card-btn {
     display: inline-block;
     text-align: center;
@@ -117,16 +69,54 @@
     font-weight: bold;
     margin-top: 15px;
     transition: background-color 0.2s;
+    cursor: pointer;
   }
+  .card-btn:hover { background-color: #004494; color: #fff; }
 
-  .card-btn:hover {
-    background-color: #004494;
-    color: #fff;
+  /* Interactive Split Button Container */
+  .syllabus-btn-container {
+    position: relative;
+    height: 45px; /* Keeps the card height stable during transition */
+    margin-top: 15px;
+  }
+  
+  .main-btn {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    margin-top: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  
+  .split-btns {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  
+  /* Trigger the swap on hover */
+  .syllabus-btn-container:hover .main-btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .syllabus-btn-container:hover .split-btns {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .split-btns .card-btn {
+    flex: 1; /* Makes both buttons share the space equally */
+    margin-top: 0;
+    padding: 10px 5px;
+    font-size: 0.85rem;
   }
 </style>
 
 <div class="home-container">
-  
   <div class="header-section">
     <h1>Home</h1>
     <h2>Welcome to the Course Pack for the Gilmore's Introductory Music Production Course.</h2>
@@ -144,7 +134,15 @@
     <div class="card">
       <h3>📋 Syllabus</h3>
       <p>Start here! This outlines our class schedule, core objectives, grading policies, and contact information.</p>
-      <a href="syllabus.html" class="card-btn">View Syllabus</a>
+      
+      <div class="syllabus-btn-container">
+        <div class="card-btn main-btn">View Syllabus</div>
+        <div class="split-btns">
+          <a href="syllabus.html?session=tue" class="card-btn">Tue 5:00 PM</a>
+          <a href="syllabus.html?session=wed" class="card-btn">Wed 6:30 PM</a>
+        </div>
+      </div>
+      
     </div>
 
     <div class="card">
