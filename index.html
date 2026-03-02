@@ -1,1 +1,149 @@
+<style>
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: transparent;
+  }
 
+  .home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Header Section */
+  .header-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #555;
+    margin-top: 0;
+  }
+
+  /* Intro Text */
+  .intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  .intro-text h3 {
+    margin-top: 30px;
+    color: #1a1a1a;
+  }
+
+  /* Grid Layout for the 4 Sections */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  /* Individual Cards */
+  .card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card p {
+    flex-grow: 1; /* Pushes the button to the bottom */
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  /* Buttons */
+  .card-btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+  }
+
+  .card-btn:hover {
+    background-color: #004494;
+    color: #fff;
+  }
+</style>
+
+<div class="home-container">
+  
+  <div class="header-section">
+    <h1>Home</h1>
+    <h2>Welcome to the Course Pack for the Gilmore's Introductory Music Production Course.</h2>
+  </div>
+
+  <div class="intro-text">
+    <p>Welcome! This website serves as your digital coursepack and central hub for everything we will cover in class. Instead of a massive stack of paper, you will find all your reading materials, audio examples, software guides, and project files organized here.</p>
+    
+    <h3>How to Navigate This Site</h3>
+    <p>Use the site's top navigation bar or the quick links below to find what you need. The site is broken down into four main areas to keep things simple. If you are ever lost, just click "Home" at the top to return to this screen.</p>
+  </div>
+
+  <div class="grid-container">
+    
+    <div class="card">
+      <h3>📋 Syllabus</h3>
+      <p>Start here! This outlines our class schedule, core objectives, grading policies, and contact information.</p>
+      <a href="#" target="_top" class="card-btn">View Syllabus</a>
+    </div>
+
+    <div class="card">
+      <h3>🎧 Lessons</h3>
+      <p>The core of the coursepack. Find a breakdown of weekly modules, reading materials, embedded video tutorials, and step-by-step project instructions.</p>
+      <a href="#" target="_top" class="card-btn">Go to Lessons</a>
+    </div>
+
+    <div class="card">
+      <h3>🎛️ Interactive Tools</h3>
+      <p>Get hands-on with the software. Explore interactive diagrams, custom calculators, and web-based audio tools to visualize and practice core concepts.</p>
+      <a href="#" target="_top" class="card-btn">Launch Tools</a>
+    </div>
+
+    <div class="card">
+      <h3>📁 Resources</h3>
+      <p>Your ultimate asset library. Download essential files for projects, including sample packs, audio stems, templates, and links to recommended plugins.</p>
+      <a href="#" target="_top" class="card-btn">Browse Resources</a>
+    </div>
+
+  </div>
+</div>
