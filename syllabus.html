@@ -108,10 +108,12 @@
     
     <h1>Music Production</h1>
     
-    <div class="course-meta">
+    <div class="course-meta" id="dynamic-meta">
       <p><strong>Instructor:</strong> Colwyn Hoard</p>
       <p><strong>Contact:</strong> choard@thegilmore.org</p>
       <p><strong>Duration:</strong> 15 Weeks</p>
+      <hr style="border:0; border-top:1px solid #ccc; margin: 10px 0;">
+      <p><em>Please select a specific session from the Homepage to view dates and times.</em></p>
     </div>
 
     <div class="course-description">
@@ -240,5 +242,33 @@
 
   </div>
 
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const session = urlParams.get('session');
+    const metaBox = document.getElementById('dynamic-meta');
+
+    // The core instructor info that stays the same for both
+    const baseInfo = `
+      <p><strong>Instructor:</strong> Colwyn Hoard</p>
+      <p><strong>Contact:</strong> choard@thegilmore.org</p>
+      <p><strong>Duration:</strong> 15 Weeks</p>
+      <hr style="border:0; border-top:1px solid #ccc; margin: 10px 0;">
+    `;
+
+    // Inject the specific Tuesday or Wednesday details
+    if (session === 'tue') {
+      metaBox.innerHTML = baseInfo + `
+        <p><strong>Session:</strong> Tuesdays</p>
+        <p><strong>Time:</strong> 5:00 PM - 6:30 PM</p>
+        <p><strong>Dates:</strong> January 6th, 2026 to April 14th, 2026</p>
+      `;
+    } else if (session === 'wed') {
+      metaBox.innerHTML = baseInfo + `
+        <p><strong>Session:</strong> Wednesdays</p>
+        <p><strong>Time:</strong> 6:30 PM - 8:00 PM</p>
+        <p><strong>Dates:</strong> January 6th, 2026 to April 14th, 2026</p>
+      `;
+    }
+  </script>
 </body>
 </html>
