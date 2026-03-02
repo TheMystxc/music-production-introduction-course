@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Page</title>
+  <title>Course Lessons | Music Production</title>
   <style>
+    /* Base Page Styling */
     body {
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-      background-color: #f9f9f9;
+      padding: 40px 20px;
+      background-color: #f4f6f8; 
       color: #333;
+      line-height: 1.6;
     }
     .container {
-      max-width: 900px;
+      max-width: 900px; 
       margin: 0 auto;
       background: white;
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
-    /* A simple back button to get home */
     .back-btn {
       display: inline-block;
       margin-bottom: 20px;
@@ -28,8 +29,79 @@
       color: #0056b3;
       font-weight: bold;
     }
-    .back-btn:hover {
-      text-decoration: underline;
+    .back-btn:hover { text-decoration: underline; }
+    
+    /* Header & Intro Section */
+    h1 {
+      margin-top: 0;
+      color: #1a1a1a;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .intro-blurb {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 40px;
+      background-color: #f9f9f9;
+      padding: 15px 20px;
+      border-radius: 6px;
+      border-left: 4px solid #17a2b8;
+    }
+
+    /* Unit Headers */
+    h2 {
+      color: #0056b3;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* Lesson Cards */
+    .lesson-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .lesson-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      border-color: #d0d0d0;
+    }
+    
+    .lesson-title {
+      margin: 0 0 8px 0;
+      font-size: 1.3rem;
+    }
+    .lesson-title a {
+      color: #1a1a1a;
+      text-decoration: none;
+      display: inline-block;
+    }
+    /* Adds a subtle arrow animation on hover */
+    .lesson-title a::after {
+      content: ' →';
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      display: inline-block;
+      transform: translateX(-5px);
+    }
+    .lesson-title a:hover {
+      color: #0056b3;
+    }
+    .lesson-title a:hover::after {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+
+    .lesson-desc {
+      margin: 0;
+      color: #666;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -38,8 +110,85 @@
   <div class="container">
     <a href="index.html" class="back-btn">← Back to Home</a>
     
-    <h1>Blank Page Placeholder</h1>
-    <p>We will build out this content soon!</p>
+    <h1>Course Lessons</h1>
+    
+    <div class="intro-blurb">
+      <p><strong>How to navigate this page:</strong> Below is the full directory of weekly modules for the course, organized by unit. Click on any week's title to open a dedicated page containing your reading materials, embedded video tutorials, interactive examples, and step-by-step project instructions for that session.</p>
+    </div>
+
+    <h2>Unit 1: Texture, Loops, & BandLab</h2>
+    
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-1.html">Week 1: Foundations & First Steps</a></h3>
+      <p class="lesson-desc">An introduction to course concepts like linear vs. layered composition, setting up your BandLab account, and starting the Loops and Layers project.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-2.html">Week 2: Listening & Layout</a></h3>
+      <p class="lesson-desc">A refresher on song layers, basic DAW tutorials covering loops and volume, and group listening discussions to build our musical vocabulary.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-3.html">Week 3: Rhythm & Studio Flow</a></h3>
+      <p class="lesson-desc">Focusing on drum patterns and sequencing, with continued DAW tutorials and dedicated studio time to build your track.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-4.html">Week 4: Polishing the Mix</a></h3>
+      <p class="lesson-desc">Tips and tricks for fading, panning, clip editing, and finalizing your Loops and Layers project before the deadline.</p>
+    </div>
+
+    <h2>Unit 2: Theory & Transition to Logic Pro</h2>
+    
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-5.html">Week 5: MIDI Basics</a></h3>
+      <p class="lesson-desc">An introduction to MIDI instruments, recording, and editing within BandLab.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-6.html">Week 6: Music Theory & Logic Pro</a></h3>
+      <p class="lesson-desc">Exploring scales, melodies, and basic chord theory, paired with an introduction to the Logic Pro interface.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-7.html">Week 7: Logic Pro Deep Dive</a></h3>
+      <p class="lesson-desc">Advanced MIDI techniques in Logic Pro, including virtual instruments and precise MIDI editing.</p>
+    </div>
+
+    <h2>Unit 3: The MIDI + Loop Project</h2>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-8.html">Week 8: Instrumentation & Structure</a></h3>
+      <p class="lesson-desc">Applying song layers to specific instruments, exploring song structure, and starting the MIDI + Loop Project.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-9.html">Week 9: Production Hygiene & Recording</a></h3>
+      <p class="lesson-desc">Best practices to avoid clipping and frequency masking, plus an introduction to recording live audio.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-10-11.html">Weeks 10-11: Audio Effects & Mixing</a></h3>
+      <p class="lesson-desc">Exploring time-based, modulation, dynamics, and spectral effects (Reverb, Delay, EQ, and Compression).</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-12-13.html">Weeks 12-13: Mixing, Mastering, & Advanced Processing</a></h3>
+      <p class="lesson-desc">Advanced techniques for effect chaining and automation to finalize the mix.</p>
+    </div>
+
+    <h2>Unit 4: Finalization</h2>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-14.html">Week 14: Studio Lab</a></h3>
+      <p class="lesson-desc">Dedicated studio time for project assistance and final polish ahead of the final turn-in.</p>
+    </div>
+
+    <div class="lesson-card">
+      <h3 class="lesson-title"><a href="lesson-15.html">Week 15: Conclusion</a></h3>
+      <p class="lesson-desc">Final listening party, exporting projects, and a course wrap-up discussion.</p>
+    </div>
+
   </div>
 
 </body>
