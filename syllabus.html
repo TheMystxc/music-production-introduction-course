@@ -268,21 +268,30 @@
       fetch(csvUrl)
         .then(response => response.text())
         .then(data => {
-          const rows = data.split('\n');
+          const rows = data.split('\\n');
           // Start at 1 to skip the header row
           for (let i = 1; i < rows.length; i++) {
+            // Use a simple split by comma, handles basic CSVs without quoted commas
             const cols = rows[i].split(','); 
-            if (cols.length >= 3) {
-              const weekNum = cols[0].trim();
+            if (cols.length >= 2) {
+              const weekNum = cols[0] ? cols[0].trim() : '';
               let dateStr = '';
+              let noteStr = '';
               
-              // Pulls column B for Tue, Column C for Wed
-              if (session === 'tue') dateStr = cols[1].trim();
-              else if (session === 'wed') dateStr = cols[2].trim();
-              else dateStr = cols[1].trim(); 
-              
-              // Pulls column D for Notes (if it exists)
-              const noteStr = cols[3] ? cols[3].trim() : '';
+              // Map to the new A-E columns
+              // cols[0] = Week, cols[1] = Tue Date, cols[2] = Tue Note
+              // cols[3] = Wed Date, cols[4] = Wed Note
+              if (session === 'tue') {
+                  dateStr = cols[1] ? cols[1].trim() : '';
+                  noteStr = cols[2] ? cols[2].trim() : '';
+              } else if (session === 'wed') {
+                  dateStr = cols[3] ? cols[3].trim() : '';
+                  noteStr = cols[4] ? cols[4].trim() : '';
+              } else {
+                  // Fallback if no session selected, default to Tuesday
+                  dateStr = cols[1] ? cols[1].trim() : '';
+                  noteStr = cols[2] ? cols[2].trim() : '';
+              }
               
               // Finds the span tag for that specific week
               const dateElement = document.getElementById('date-' + weekNum);
