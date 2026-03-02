@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Foundations & First Steps</title>
+  <style>
+    /* Base Page Styling */
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f4f6f8; 
+      color: #333;
+      line-height: 1.6;
+    }
+    .lesson-wrapper {
+      max-width: 800px; 
+      margin: 0 auto;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+    }
+    .back-btn:hover { text-decoration: underline; }
+
+    h1 {
+      margin-top: 0;
+      color: #1a1a1a;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* Concept Container (Wraps a single idea) */
+    .concept-block {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border-left: 5px solid #0056b3; 
+    }
+    .concept-block h2 {
+      margin-top: 0;
+      color: #1a1a1a;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    .concept-block h3 {
+      color: #0056b3;
+      margin-top: 25px;
+    }
+
+    /* Text Formatting */
+    .text-block {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .toc-box {
+      background-color: #f9f9f9;
+      padding: 15px 25px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      margin-bottom: 30px;
+    }
+    .toc-box h3 { margin-top: 0; }
+
+    /* Image Block */
+    .image-block {
+      margin: 30px 0;
+      text-align: center; 
+      background-color: #fcfcfc;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .image-caption {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* Audio Stack */
+    .audio-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; 
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      margin-top: 20px;
+    }
+    .audio-item label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #222;
+    }
+    audio {
+      width: 100%;
+      height: 40px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lesson-wrapper">
+    <a href="lessons.html" class="back-btn">← Back to Lessons</a>
+    
+    <h1>Lesson Week 1: Foundations & First Steps</h1>
+
+    <div class="toc-box">
+      <h3>Lesson Table of Contents</h3>
+      <ul>
+        <li>What is Music?</li>
+        <li>Thinking about Music</li>
+        <li>Vertical vs. Horizontal</li>
+        <li>Song Layers</li>
+        <li>Setting up a BandLab Account <em>(Coming soon)</em></li>
+      </ul>
+    </div>
+
+    <div class="concept-block">
+      <h2>What is Music?</h2>
+      <div class="text-block">
+        <p>Human beings have been creating music for a remarkably long time; archaeologists have discovered bone and ivory flutes dating back over 40,000 years, and it is highly likely that singing and rhythmic drumming existed long before that.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_bone_flute_and_synth" alt="Ancient flute next to modern synth">
+        <div class="image-caption">From 40,000-year-old bone flutes to modern digital synthesizers, the tools we use to make music have changed, but the fundamental human desire to organize sound remains the same.</div>
+      </div>
+
+      <div class="text-block">
+        <p>Finding out what makes "good" music is an entirely subjective endeavor and varies wildly from person to person. However, at its absolute root, <strong>music is a temporal art form</strong>.</p>
+        <p>To call music a "temporal art form" means that it exists strictly within the passage of time. A painting can be taken in all at once with a single glance, but music has a defined starting point and an ending point. The content of the music is everything that makes sound between those two points.</p>
+        <p>If a sound does not have a defined start and end, or lacks intentional organization, we generally do not classify it as music. For example, the continuous, unchanging hum of a refrigerator is just a sound. However, if a producer records that hum, chops it into rhythmic pieces, and deliberately places it over a drumbeat, it becomes music. Intent and organization transform raw sound into a musical experience.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_chopped_audio_waveform" alt="Chopped audio on a DAW grid">
+        <div class="image-caption">By chopping a continuous, random noise into rhythmic blocks on a timeline, we apply intent and organization, turning raw sound into musical material.</div>
+      </div>
+
+      <div class="text-block">
+        <p>This foundational understanding of music as a temporal art form is critical to your journey in music production. Why? Because when you create a song, your primary job is to manage the listener's attention over time. Knowing that your song is a timeline allows you to think like a director—deciding when to introduce a new sound to keep things exciting, and when to pull elements away to give the listener a breather.</p>
+      </div>
+    </div>
+
+    <div class="concept-block">
+      <h2>Thinking about Music</h2>
+      <div class="text-block">
+        <p>There are many different ways we can think about and categorize music. You might already do this naturally without realizing it. For example:</p>
+        <ul>
+          <li><strong>Pitch:</strong> Thinking about music in terms of highness or lowness. (e.g., "That singer has a really high voice," or "That bass is shaking the floor.")</li>
+          <li><strong>Timbre:</strong> The "color" or unique character of a sound. Timbre is the reason a middle C played on an acoustic guitar sounds completely different from a middle C played on a trumpet.</li>
+          <li><strong>Genre/Style:</strong> Categorizing music by its cultural, historical, or rhythmic traits (e.g., Jazz, Hip-Hop, Country, EDM).</li>
+        </ul>
+        <p>While these are all valid, one of the most useful ways we will talk about music as producers is by breaking songs down into <strong>Vertical</strong> and <strong>Horizontal</strong> contexts.</p>
+      </div>
+
+      <h3>Vertical vs. Horizontal</h3>
+      <div class="text-block">
+        <p>Imagine you are looking at a grid on a computer screen.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_vertical_horizontal_diagram" alt="Diagram showing time vs layers">
+        <div class="image-caption">In music production, the horizontal axis dictates how the song moves forward through time, while the vertical axis dictates how thick the stack of sounds is at any exact moment.</div>
+      </div>
+
+      <div class="text-block">
+        <p><strong>The Vertical Axis (Stacking)</strong><br>
+        The vertical axis is all about what is happening at the exact same moment in time. When you pause a song, everything you hear in that frozen second is the vertical data.</p>
+        <ul>
+          <li><strong>Pitch:</strong> Which notes are stacked on top of each other? Are they high, low, or in the middle?</li>
+          <li><strong>Harmony:</strong> When multiple different pitches are played simultaneously, they create harmony (chords).</li>
+          <li><strong>Texture:</strong> How thick or thin is the stack of sounds? Is it just one person singing with an acoustic guitar (thin texture), or is it a massive synthesizer, a booming bass, a drum kit, and a 10-person choir all hitting a chord at once (thick texture)?</li>
+        </ul>
+        
+        <p><strong>The Horizontal Axis (The Timeline)</strong><br>
+        The horizontal axis is all about how the music moves forward through time. You have to hit "Play" to hear the horizontal data.</p>
+        <ul>
+          <li><strong>Melody:</strong> A sequence of single notes unfolding one after another.</li>
+          <li><strong>Entrances:</strong> The specific moments on the timeline when a new instrument starts playing or an old one stops.</li>
+          <li><strong>Structure (Form):</strong> The overarching map of the song over time. For example, moving from a Verse, to a Chorus, back to a Verse.</li>
+        </ul>
+        <p>We are going to start our song-making journey by thinking critically about music on the vertical axis, specifically focusing on <strong>song layers</strong>.</p>
+      </div>
+    </div>
+
+    <div class="concept-block">
+      <h2>Song Layers</h2>
+      <div class="text-block">
+        <p>In modern US popular music, songs generally fall into a <strong>homophonic texture</strong>.</p>
+        <p>Homophonic is a term used to describe how a piece of music is built. A homophonic texture is simply a musical arrangement where there is one clear, dominant melody that is supported by background chords and accompaniment. Think of a pop singer performing on stage while a band plays chords behind them. The band is supporting the singer, but the singer's voice is the main focus.</p>
+        <p>In our class, we are going to look at the modern pop style, analyze its homophonic texture, and break down each vertical layer to understand its specific musical function. In my view, there are four major song layer types:</p>
+      </div>
+
+      <h3>1. Melody</h3>
+      <div class="text-block">
+        <p>Thinking vertically, from the top on down, the melody is usually the most important layer.</p>
+        <p><strong>What is it?</strong> A melody is a sequence of single notes that is musically satisfying; it is the main tune of the song. The easiest way to identify the melody is to ask yourself: <em>What is the part I want to sing or whistle along to?</em> Often, the melody sits in a higher frequency range (like a lead vocalist or a screaming electric guitar solo), but not always! Whether it is a high-pitched pop vocal or a low, rhythmic spoken-word flow, the melody is mixed to stand out sonically. It is intentionally designed to be the easiest thing for your ear to latch onto.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_full_arrangement" alt="Full arrangement view in DAW">
+        <div class="image-caption">Full arrangement.</div>
+      </div>
+      
+      <div class="image-block">
+        <img src="post_image_link_here_melody" alt="Isolated melody view in DAW">
+        <div class="image-caption">Melody.</div>
+      </div>
+
+      <div class="audio-stack">
+        <div class="audio-item">
+          <label>Audio Example: Full Mix (Context)</label>
+          <audio controls>
+            <source src="post_audio_link_here_full_mix" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="audio-item">
+          <label>Audio Example: Isolated Melody Stem</label>
+          <audio controls>
+            <source src="post_audio_link_here_isolated_melody" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+      <h3>2. Harmony and Background Elements</h3>
+      <div class="text-block">
+        <p>If the melody is the star of the show, the harmony is the stage it stands on.</p>
+        <p><strong>What is it?</strong> The harmony layer consists of the musical chords that provide the emotional context for the melody. This layer is usually made up of instruments like acoustic guitars, pianos, or synthesizer pads. In modern production, this layer is often the "widest" part of the song; producers will pan these instruments far to the left and right speakers to create a thick, immersive wall of sound that wraps around the lead vocal.</p>
+        <p>Without harmony, a melody can sound empty or ambiguous. The exact same melody sung over a "happy" major chord will feel completely different if you sing it over a "sad" minor chord. The background layer's job is to dictate the mood.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_stacked_notes_chords" alt="MIDI piano roll showing stacked notes">
+        <div class="image-caption">Unlike a melody, which plays notes one after the other, harmony is created by stacking multiple notes vertically so they play at the exact same time, forming a chord.</div>
+      </div>
+
+      <h3>3. Bass</h3>
+      <div class="text-block">
+        <p>The bass layer is the sonic floor of your track. It acts as the crucial glue between your song's harmony and its rhythm.</p>
+        <p><strong>What is it?</strong> The bass is a low-frequency instrument (like an electric bass guitar or a sub-bass synthesizer). Because low frequencies carry a lot of physical energy—they are the frequencies you actually feel vibrating in your chest at a concert—they take up a lot of space in a mix.</p>
+        <p>Musically, the bass has two jobs. First, it dictates the "root" of the harmony; whatever note the bass is playing tells our brain what the foundation of the chord is. Second, it locks in with the drums. A great bassline doesn't just play the right notes; it plays them with a groove that perfectly matches the rhythm section.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_eq_bass_frequencies" alt="EQ graph highlighting bass frequencies">
+        <div class="image-caption">The bass layer lives in the lowest frequencies of the human hearing spectrum. Because these frequencies carry massive amounts of energy, a song usually only has one bass instrument playing at a time to prevent the mix from sounding muddy.</div>
+      </div>
+
+      <h3>4. Drums or Rhythm Section</h3>
+      <div class="text-block">
+        <p>The rhythm section is the heartbeat and the grid of your song.</p>
+        <p><strong>What is it?</strong> This layer provides the tempo (the speed), the groove, and the forward momentum. In modern production, the drum layer is usually built from three main components:</p>
+        <ol>
+          <li><strong>The Kick Drum:</strong> A low, thumping sound that provides the heavy pulse (often hitting on beats 1 and 3).</li>
+          <li><strong>The Snare or Clap:</strong> A sharp, cracking sound that provides the "backbeat" (often hitting on beats 2 and 4).</li>
+          <li><strong>The Hi-Hats:</strong> Rapid, high-frequency ticking sounds that fill in the gaps between the kick and snare, giving the beat its speed and texture.</li>
+        </ol>
+        <p>Even without any melody or harmony, a well-produced drum loop can make a listener want to move. When you lay a solid drum foundation, the bass, harmony, and melody have a sturdy rhythmic grid to sit on.</p>
+      </div>
+
+      <div class="image-block">
+        <img src="post_image_link_here_drum_sequencer" alt="16-step drum sequencer">
+        <div class="image-caption">A standard drum sequencer layout. Notice how the kick and snare trade off to create the main pulse, while the hi-hats play continuously to provide a sense of speed and momentum.</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
