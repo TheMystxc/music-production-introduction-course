@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Page</title>
+  <title>Course Syllabus | Music Production</title>
   <style>
+    /* Base Page Styling */
     body {
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-      background-color: #f9f9f9;
+      padding: 40px 20px;
+      background-color: #f4f6f8; 
       color: #333;
+      line-height: 1.6;
     }
     .container {
-      max-width: 900px;
+      max-width: 900px; 
       margin: 0 auto;
       background: white;
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
-    /* A simple back button to get home */
     .back-btn {
       display: inline-block;
       margin-bottom: 20px;
@@ -28,9 +29,76 @@
       color: #0056b3;
       font-weight: bold;
     }
-    .back-btn:hover {
-      text-decoration: underline;
+    .back-btn:hover { text-decoration: underline; }
+    
+    /* Header & Intro Section */
+    h1 {
+      margin-top: 0;
+      color: #1a1a1a;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
+    .course-meta {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 4px solid #0056b3;
+      margin-bottom: 30px;
+    }
+    .course-meta p { margin: 5px 0; font-size: 1.05rem;}
+    
+    .course-description {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    /* Unit Headers */
+    h2 {
+      color: #0056b3;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    /* Accordion (Weekly Dropdowns) */
+    details {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    summary {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 15px 20px;
+      cursor: pointer;
+      background-color: #fcfcfc;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+    summary:hover { background-color: #f1f1f1; }
+    .week-content { padding: 15px 20px 20px 20px; }
+    
+    .week-content p { margin: 10px 0; }
+
+    /* Category Badges */
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-right: 8px;
+      color: white;
+    }
+    .badge.topic { background-color: #6c757d; }
+    .badge.activity { background-color: #17a2b8; }
+    .badge.daw { background-color: #6f42c1; }
+    .badge.project { background-color: #28a745; }
+    .badge.deadline { background-color: #dc3545; }
+    .badge.theory { background-color: #fd7e14; }
+
   </style>
 </head>
 <body>
@@ -38,8 +106,138 @@
   <div class="container">
     <a href="index.html" class="back-btn">← Back to Home</a>
     
-    <h1>Blank Page Placeholder</h1>
-    <p>We will build out this content soon!</p>
+    <h1>Music Production</h1>
+    
+    <div class="course-meta">
+      <p><strong>Instructor:</strong> Colwyn Hoard</p>
+      <p><strong>Contact:</strong> choard@thegilmore.org</p>
+      <p><strong>Duration:</strong> 15 Weeks</p>
+    </div>
+
+    <div class="course-description">
+      <p>This course explores the creative and technical fundamentals of music production. Students will learn how to deconstruct the music they listen to and rebuild it using modern tools. The course begins with building loops in BandLab to master song structure and texture, then transitions to Logic Pro to explore advanced MIDI, synthesis, and audio effects.</p>
+    </div>
+
+    <h2>Unit 1: Texture, Loops, & BandLab</h2>
+    
+    <details>
+      <summary>Week 1: Foundations & First Steps</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> What is Music?; Linear vs. Layers; Structure vs. Texture; Juxtaposition vs. Superimposition.</p>
+        <p><span class="badge activity">Activities</span> Lab Expectations; Setting up BandLab accounts; Personal Info Form.</p>
+        <p><span class="badge project">Project</span> Start Loops and Layers Project (BandLab).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 2: Listening & Layout</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Refresher on Song Layers; Talking about Music (Language & Terminology).</p>
+        <p><span class="badge daw">DAW Skills</span> Intro to DAWs; Tutorial on Loops (Moving, Volume, Looping).</p>
+        <p><span class="badge activity">Activities</span> Song Recreation Activity; Group Listening Party (Discussion).</p>
+        <p><span class="badge project">Project</span> Continue Loops and Layers Project.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 3: Rhythm & Studio Flow</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Drum Patterns & Sequencing.</p>
+        <p><span class="badge daw">DAW Skills</span> Continued DAW Tutorial (Loop focus).</p>
+        <p><span class="badge activity">Activities</span> Studio Time Focus.</p>
+        <p><span class="badge project">Project</span> Continue Loops and Layers Project.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 4: Polishing the Mix</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Tips & Tricks (Fading, Panning, Balance); Automation (Volume/Pan); Clip Editing (Speed, Pitch Shift, Reverse, Cutting); Making satisfying transitions.</p>
+        <p><span class="badge activity">Activities</span> Studio Time Focus.</p>
+        <p><span class="badge deadline">Deadline</span> Finish Loops and Layers Project.</p>
+      </div>
+    </details>
+
+    <h2>Unit 2: Theory & Transition to Logic Pro</h2>
+    
+    <details>
+      <summary>Week 5: MIDI Basics</summary>
+      <div class="week-content">
+        <p><span class="badge daw">DAW Skills</span> Introduction to MIDI in BandLab (Instruments, Recording, Editing).</p>
+        <p><span class="badge activity">Activities</span> Group Listening: Genre Loop Projects.</p>
+        <p><span class="badge project">Project</span> Group Listening Party (Discussion).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 6: Music Theory & Logic Pro</summary>
+      <div class="week-content">
+        <p><span class="badge theory">Theory</span> Scales (Major/Minor); What is a Melody?; Harmonic Progressions (Basic Chord Theory).</p>
+        <p><span class="badge daw">DAW Skills</span> Introduction to Logic Pro; Basic Logic Tutorial.</p>
+        <p><span class="badge activity">Activities</span> Harmony Demo; Progression Demo; Group Keyboard Activity.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 7: Logic Pro Deep Dive</summary>
+      <div class="week-content">
+        <p><span class="badge daw">DAW Skills</span> MIDI in Logic Pro (Virtual Instruments, Recording, Editing).</p>
+        <p><span class="badge activity">Activities</span> Exploration Time (MIDI).</p>
+      </div>
+    </details>
+
+    <h2>Unit 3: The MIDI + Loop Project</h2>
+
+    <details>
+      <summary>Week 8: Instrumentation & Structure</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Song Layers related to Instruments; Song Structure (Generic vs. Specific, Revisit Layers vs. Linear).</p>
+        <p><span class="badge project">Project</span> Start MIDI + Loop Project.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 9: Production Hygiene & Recording</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Things to avoid (Clipping, Over-density, Frequency masking); Introduction to Recording Audio.</p>
+        <p><span class="badge project">Project</span> Continue MIDI + Loop Project (Recording assistance available).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Weeks 10-11: Audio Effects & Mixing</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Time-based (Delay, Reverb); Modulation (Chorus, Flanger); Dynamics (Compression); Spectral (EQ, Filter).</p>
+        <p><span class="badge project">Project</span> Continue MIDI + Loop Project (Recording assistance available).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Weeks 12-13: Mixing, Mastering, & Advanced Processing</summary>
+      <div class="week-content">
+        <p><span class="badge topic">Topics</span> Chaining Effects; Automation of Effects parameters.</p>
+        <p><span class="badge project">Project</span> Continue MIDI + Loop Project.</p>
+        <p><span class="badge deadline">Deadline</span> Optional Early Turn-in.</p>
+      </div>
+    </details>
+
+    <h2>Unit 4: Finalization</h2>
+
+    <details>
+      <summary>Week 14: Studio Lab</summary>
+      <div class="week-content">
+        <p><span class="badge activity">Activities</span> Assist Student Projects; Final Polish.</p>
+        <p><span class="badge deadline">Deadline</span> Final Turn-in: MIDI + Loop Project.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Week 15: Conclusion</summary>
+      <div class="week-content">
+        <p><span class="badge activity">Activities</span> Final Listening Party and Discussion; Exporting projects off iMacs. Final Free Studio Time.</p>
+      </div>
+    </details>
+
   </div>
 
 </body>
