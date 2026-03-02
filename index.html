@@ -9,9 +9,17 @@
     background-color: transparent;
   }
 
+  /* Widened container to give the 4 cards room to breathe */
   .home-container {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
+  }
+
+  /* Keeps the text from stretching too wide and becoming hard to read */
+  .header-section, .intro-text {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Header Section */
@@ -49,8 +57,20 @@
   /* Grid Layout for the 4 Sections */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Forces 4 columns on desktop */
     gap: 25px;
+  }
+
+  /* Responsive Rules: Makes cards stack nicely on smaller screens */
+  @media (max-width: 1000px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 650px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* Individual Cards */
@@ -124,25 +144,25 @@
     <div class="card">
       <h3>📋 Syllabus</h3>
       <p>Start here! This outlines our class schedule, core objectives, grading policies, and contact information.</p>
-      <a href="#" target="_top" class="card-btn">View Syllabus</a>
+      <a href="syllabus.html" class="card-btn">View Syllabus</a>
     </div>
 
     <div class="card">
       <h3>🎧 Lessons</h3>
       <p>The core of the coursepack. Find a breakdown of weekly modules, reading materials, embedded video tutorials, and step-by-step project instructions.</p>
-      <a href="#" target="_top" class="card-btn">Go to Lessons</a>
+      <a href="lessons.html" class="card-btn">Go to Lessons</a>
     </div>
 
     <div class="card">
       <h3>🎛️ Interactive Tools</h3>
       <p>Get hands-on with the software. Explore interactive diagrams, custom calculators, and web-based audio tools to visualize and practice core concepts.</p>
-      <a href="#" target="_top" class="card-btn">Launch Tools</a>
+      <a href="tools.html" class="card-btn">Launch Tools</a>
     </div>
 
     <div class="card">
       <h3>📁 Resources</h3>
       <p>Your ultimate asset library. Download essential files for projects, including sample packs, audio stems, templates, and links to recommended plugins.</p>
-      <a href="#" target="_top" class="card-btn">Browse Resources</a>
+      <a href="resources.html" class="card-btn">Browse Resources</a>
     </div>
 
   </div>
