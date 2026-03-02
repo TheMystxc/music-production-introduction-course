@@ -6,6 +6,9 @@
   <title>Lesson 1: Foundations & First Steps</title>
   <style>
     /* Base Page Styling */
+    html {
+      scroll-behavior: smooth; /* Enables the smooth gliding effect */
+    }
     body {
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
@@ -43,6 +46,10 @@
       margin-bottom: 30px;
       border-left: 5px solid #0056b3; 
     }
+    .concept-block h2, .concept-block h3 {
+      /* Gives the browser a little breathing room above the text when it scrolls to an anchor */
+      scroll-margin-top: 20px; 
+    }
     .concept-block h2 {
       margin-top: 0;
       color: #1a1a1a;
@@ -61,6 +68,8 @@
       color: #444;
       margin-bottom: 20px;
     }
+    
+    /* Table of Contents Formatting */
     .toc-box {
       background-color: #f9f9f9;
       padding: 15px 25px;
@@ -69,6 +78,16 @@
       margin-bottom: 30px;
     }
     .toc-box h3 { margin-top: 0; }
+    .toc-box a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .toc-box a:hover {
+      color: #004494;
+      text-decoration: underline;
+    }
 
     /* Image Block */
     .image-block {
@@ -127,16 +146,16 @@
     <div class="toc-box">
       <h3>Lesson Table of Contents</h3>
       <ul>
-        <li>What is Music?</li>
-        <li>Thinking about Music</li>
-        <li>Vertical vs. Horizontal</li>
-        <li>Song Layers</li>
+        <li><a href="#what-is-music">What is Music?</a></li>
+        <li><a href="#thinking-about-music">Thinking about Music</a></li>
+        <li><a href="#vertical-horizontal">Vertical vs. Horizontal</a></li>
+        <li><a href="#song-layers">Song Layers</a></li>
         <li>Setting up a BandLab Account <em>(Coming soon)</em></li>
       </ul>
     </div>
 
     <div class="concept-block">
-      <h2>What is Music?</h2>
+      <h2 id="what-is-music">What is Music?</h2>
       <div class="text-block">
         <p>Human beings have been creating music for a remarkably long time; archaeologists have discovered bone and ivory flutes dating back over 40,000 years, and it is highly likely that singing and rhythmic drumming existed long before that.</p>
       </div>
@@ -163,7 +182,7 @@
     </div>
 
     <div class="concept-block">
-      <h2>Thinking about Music</h2>
+      <h2 id="thinking-about-music">Thinking about Music</h2>
       <div class="text-block">
         <p>There are many different ways we can think about and categorize music. You might already do this naturally without realizing it. For example:</p>
         <ul>
@@ -174,7 +193,7 @@
         <p>While these are all valid, one of the most useful ways we will talk about music as producers is by breaking songs down into <strong>Vertical</strong> and <strong>Horizontal</strong> contexts.</p>
       </div>
 
-      <h3>Vertical vs. Horizontal</h3>
+      <h3 id="vertical-horizontal">Vertical vs. Horizontal</h3>
       <div class="text-block">
         <p>Imagine you are looking at a grid on a computer screen.</p>
       </div>
@@ -205,7 +224,7 @@
     </div>
 
     <div class="concept-block">
-      <h2>Song Layers</h2>
+      <h2 id="song-layers">Song Layers</h2>
       <div class="text-block">
         <p>In modern US popular music, songs generally fall into a <strong>homophonic texture</strong>.</p>
         <p>Homophonic is a term used to describe how a piece of music is built. A homophonic texture is simply a musical arrangement where there is one clear, dominant melody that is supported by background chords and accompaniment. Think of a pop singer performing on stage while a band plays chords behind them. The band is supporting the singer, but the singer's voice is the main focus.</p>
