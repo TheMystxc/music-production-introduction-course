@@ -32,12 +32,7 @@
     .back-btn:hover { text-decoration: underline; }
     
     /* Header & Intro Section */
-    h1 {
-      margin-top: 0;
-      color: #1a1a1a;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
+    h1 { margin-top: 0; color: #1a1a1a; font-size: 2.2rem; margin-bottom: 10px; }
     .course-meta {
       background: #f9f9f9;
       padding: 15px;
@@ -46,19 +41,10 @@
       margin-bottom: 30px;
     }
     .course-meta p { margin: 5px 0; font-size: 1.05rem;}
-    
-    .course-description {
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
+    .course-description { font-size: 1.1rem; margin-bottom: 40px; }
 
     /* Unit Headers */
-    h2 {
-      color: #0056b3;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-      margin-top: 50px;
-    }
+    h2 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 50px; }
 
     /* Accordion (Weekly Dropdowns) */
     details {
@@ -79,8 +65,15 @@
     }
     summary:hover { background-color: #f1f1f1; }
     .week-content { padding: 15px 20px 20px 20px; }
-    
     .week-content p { margin: 10px 0; }
+    
+    /* The dynamically injected date */
+    .dynamic-date {
+      color: #666;
+      font-weight: normal;
+      font-size: 1.05rem;
+      margin-left: 10px;
+    }
 
     /* Category Badges */
     .badge {
@@ -123,7 +116,7 @@
     <h2>Unit 1: Texture, Loops, & BandLab</h2>
     
     <details>
-      <summary>Week 1: Foundations & First Steps</summary>
+      <summary>Week 1: Foundations & First Steps<span class="dynamic-date" id="date-1"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> What is Music?; Linear vs. Layers; Structure vs. Texture; Juxtaposition vs. Superimposition.</p>
         <p><span class="badge activity">Activities</span> Lab Expectations; Setting up BandLab accounts; Personal Info Form.</p>
@@ -132,7 +125,7 @@
     </details>
 
     <details>
-      <summary>Week 2: Listening & Layout</summary>
+      <summary>Week 2: Listening & Layout<span class="dynamic-date" id="date-2"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Refresher on Song Layers; Talking about Music (Language & Terminology).</p>
         <p><span class="badge daw">DAW Skills</span> Intro to DAWs; Tutorial on Loops (Moving, Volume, Looping).</p>
@@ -142,7 +135,7 @@
     </details>
 
     <details>
-      <summary>Week 3: Rhythm & Studio Flow</summary>
+      <summary>Week 3: Rhythm & Studio Flow<span class="dynamic-date" id="date-3"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Drum Patterns & Sequencing.</p>
         <p><span class="badge daw">DAW Skills</span> Continued DAW Tutorial (Loop focus).</p>
@@ -152,7 +145,7 @@
     </details>
 
     <details>
-      <summary>Week 4: Polishing the Mix</summary>
+      <summary>Week 4: Polishing the Mix<span class="dynamic-date" id="date-4"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Tips & Tricks (Fading, Panning, Balance); Automation (Volume/Pan); Clip Editing (Speed, Pitch Shift, Reverse, Cutting); Making satisfying transitions.</p>
         <p><span class="badge activity">Activities</span> Studio Time Focus.</p>
@@ -163,7 +156,7 @@
     <h2>Unit 2: Theory & Transition to Logic Pro</h2>
     
     <details>
-      <summary>Week 5: MIDI Basics</summary>
+      <summary>Week 5: MIDI Basics<span class="dynamic-date" id="date-5"></span></summary>
       <div class="week-content">
         <p><span class="badge daw">DAW Skills</span> Introduction to MIDI in BandLab (Instruments, Recording, Editing).</p>
         <p><span class="badge activity">Activities</span> Group Listening: Genre Loop Projects.</p>
@@ -172,7 +165,7 @@
     </details>
 
     <details>
-      <summary>Week 6: Music Theory & Logic Pro</summary>
+      <summary>Week 6: Music Theory & Logic Pro<span class="dynamic-date" id="date-6"></span></summary>
       <div class="week-content">
         <p><span class="badge theory">Theory</span> Scales (Major/Minor); What is a Melody?; Harmonic Progressions (Basic Chord Theory).</p>
         <p><span class="badge daw">DAW Skills</span> Introduction to Logic Pro; Basic Logic Tutorial.</p>
@@ -181,7 +174,7 @@
     </details>
 
     <details>
-      <summary>Week 7: Logic Pro Deep Dive</summary>
+      <summary>Week 7: Logic Pro Deep Dive<span class="dynamic-date" id="date-7"></span></summary>
       <div class="week-content">
         <p><span class="badge daw">DAW Skills</span> MIDI in Logic Pro (Virtual Instruments, Recording, Editing).</p>
         <p><span class="badge activity">Activities</span> Exploration Time (MIDI).</p>
@@ -191,7 +184,7 @@
     <h2>Unit 3: The MIDI + Loop Project</h2>
 
     <details>
-      <summary>Week 8: Instrumentation & Structure</summary>
+      <summary>Week 8: Instrumentation & Structure<span class="dynamic-date" id="date-8"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Song Layers related to Instruments; Song Structure (Generic vs. Specific, Revisit Layers vs. Linear).</p>
         <p><span class="badge project">Project</span> Start MIDI + Loop Project.</p>
@@ -199,7 +192,7 @@
     </details>
 
     <details>
-      <summary>Week 9: Production Hygiene & Recording</summary>
+      <summary>Week 9: Production Hygiene & Recording<span class="dynamic-date" id="date-9"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Things to avoid (Clipping, Over-density, Frequency masking); Introduction to Recording Audio.</p>
         <p><span class="badge project">Project</span> Continue MIDI + Loop Project (Recording assistance available).</p>
@@ -207,7 +200,7 @@
     </details>
 
     <details>
-      <summary>Weeks 10-11: Audio Effects & Mixing</summary>
+      <summary>Weeks 10-11: Audio Effects & Mixing<span class="dynamic-date" id="date-10"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Time-based (Delay, Reverb); Modulation (Chorus, Flanger); Dynamics (Compression); Spectral (EQ, Filter).</p>
         <p><span class="badge project">Project</span> Continue MIDI + Loop Project (Recording assistance available).</p>
@@ -215,7 +208,7 @@
     </details>
 
     <details>
-      <summary>Weeks 12-13: Mixing, Mastering, & Advanced Processing</summary>
+      <summary>Weeks 12-13: Mixing, Mastering, & Advanced Processing<span class="dynamic-date" id="date-12"></span></summary>
       <div class="week-content">
         <p><span class="badge topic">Topics</span> Chaining Effects; Automation of Effects parameters.</p>
         <p><span class="badge project">Project</span> Continue MIDI + Loop Project.</p>
@@ -226,7 +219,7 @@
     <h2>Unit 4: Finalization</h2>
 
     <details>
-      <summary>Week 14: Studio Lab</summary>
+      <summary>Week 14: Studio Lab<span class="dynamic-date" id="date-14"></span></summary>
       <div class="week-content">
         <p><span class="badge activity">Activities</span> Assist Student Projects; Final Polish.</p>
         <p><span class="badge deadline">Deadline</span> Final Turn-in: MIDI + Loop Project.</p>
@@ -234,7 +227,7 @@
     </details>
 
     <details>
-      <summary>Week 15: Conclusion</summary>
+      <summary>Week 15: Conclusion<span class="dynamic-date" id="date-15"></span></summary>
       <div class="week-content">
         <p><span class="badge activity">Activities</span> Final Listening Party and Discussion; Exporting projects off iMacs. Final Free Studio Time.</p>
       </div>
@@ -243,11 +236,11 @@
   </div>
 
   <script>
+    // 1. Session Meta Box Logic
     const urlParams = new URLSearchParams(window.location.search);
     const session = urlParams.get('session');
     const metaBox = document.getElementById('dynamic-meta');
 
-    // The core instructor info that stays the same for both
     const baseInfo = `
       <p><strong>Instructor:</strong> Colwyn Hoard</p>
       <p><strong>Contact:</strong> choard@thegilmore.org</p>
@@ -255,19 +248,59 @@
       <hr style="border:0; border-top:1px solid #ccc; margin: 10px 0;">
     `;
 
-    // Inject the specific Tuesday or Wednesday details
     if (session === 'tue') {
       metaBox.innerHTML = baseInfo + `
         <p><strong>Session:</strong> Tuesdays</p>
         <p><strong>Time:</strong> 5:00 PM - 6:30 PM</p>
-        <p><strong>Dates:</strong> January 6th, 2026 to April 14th, 2026</p>
       `;
     } else if (session === 'wed') {
       metaBox.innerHTML = baseInfo + `
         <p><strong>Session:</strong> Wednesdays</p>
         <p><strong>Time:</strong> 6:30 PM - 8:00 PM</p>
-        <p><strong>Dates:</strong> January 6th, 2026 to April 14th, 2026</p>
       `;
+    }
+
+    // 2. Google Sheets CSV Fetch Logic
+    // Paste the CSV link you copied from Google Sheets right between the quotes below:
+    const csvUrl = 'PASTE_YOUR_CSV_LINK_HERE'; 
+
+    if (csvUrl !== 'PASTE_YOUR_CSV_LINK_HERE') {
+      fetch(csvUrl)
+        .then(response => response.text())
+        .then(data => {
+          const rows = data.split('\n');
+          // Start at 1 to skip the header row
+          for (let i = 1; i < rows.length; i++) {
+            const cols = rows[i].split(','); 
+            if (cols.length >= 3) {
+              const weekNum = cols[0].trim();
+              let dateStr = '';
+              
+              // Pulls column B for Tue, Column C for Wed
+              if (session === 'tue') dateStr = cols[1].trim();
+              else if (session === 'wed') dateStr = cols[2].trim();
+              else dateStr = cols[1].trim(); 
+              
+              // Pulls column D for Notes (if it exists)
+              const noteStr = cols[3] ? cols[3].trim() : '';
+              
+              // Finds the span tag for that specific week
+              const dateElement = document.getElementById('date-' + weekNum);
+              if (dateElement && dateStr) {
+                  let displayText = ' • ' + dateStr;
+                  if (noteStr) displayText += ' [' + noteStr + ']';
+                  dateElement.textContent = displayText;
+                  
+                  // Turns text red if you type 'cancel' in the note column
+                  if (noteStr.toLowerCase().includes('cancel')) {
+                      dateElement.style.color = '#dc3545';
+                      dateElement.style.fontWeight = 'bold';
+                  }
+              }
+            }
+          }
+        })
+        .catch(error => console.error('Error fetching schedule:', error));
     }
   </script>
 </body>
